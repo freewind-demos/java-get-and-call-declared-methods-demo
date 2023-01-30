@@ -9,11 +9,12 @@ public class Hello {
     }
 
     public static void main(String[] args) throws Exception {
-        Method[] methods = Hello.class.getDeclaredMethods();
+        Class<Hello> helloClass = Hello.class;
+        Method[] methods = helloClass.getDeclaredMethods();
         for (Method method : methods) {
             System.out.println("### method: " + method.getName());
             if (method.getName().equals("hello")) {
-                method.invoke(new Hello(), "Freewind");
+                method.invoke(helloClass.getDeclaredConstructor().newInstance(), "Freewind");
             }
         }
     }
