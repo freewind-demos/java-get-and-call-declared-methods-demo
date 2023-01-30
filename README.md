@@ -1,7 +1,7 @@
-Java Maven Demo
+Java Get and Call Declared Methods Demo
 =====================
 
-Use maven for Java.
+如何拿到一个class的method并且调用。
 
 How to run:
 
